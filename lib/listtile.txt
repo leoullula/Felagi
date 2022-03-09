@@ -1,0 +1,167 @@
+import 'package:felagi/Detail.dart';
+import 'package:flutter/material.dart';
+
+class Catagcontent extends StatelessWidget {
+  const Catagcontent({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final List<int> numbers = [1, 2, 3, 4, 1, 2, 3, 4];
+    return ListView(children: [
+      Column(children: [
+        ListTile(
+          leading: Icon(
+            Icons.add,
+            color: Colors.green,
+          ),
+          subtitle: Column(children: [
+            Text(
+              "NOTIFY ME OF NEW JOB",
+              style: TextStyle(color: Colors.green),
+            ),
+          ]),
+          trailing: Column(
+            children: [Icon(Icons.favorite)],
+          ),
+        ),
+        Divider(
+          color: Colors.grey,
+        ),
+        Container(
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 4.0),
+            height: MediaQuery.of(context).size.height * 1.32,
+            child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: numbers.length,
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Detail())),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ListTile(
+                          title: Text(
+                            "SOFTWARE EGINEER l/ll",
+                            style: TextStyle(color: Colors.blueGrey),
+                          ),
+                          leading: Icon(
+                            Icons.add,
+                            color: Colors.green,
+                          ),
+                          subtitle: Column(children: [
+                            Text(
+                              "Addis Abeba",
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
+                            Text(
+                              "£10,200 - 13,400k(Felagi Est)",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                              "Easy",
+                              style: TextStyle(color: Colors.green),
+                            ),
+                            Text(
+                              "NOTIFY ME OF NEW JOB",
+                              style: TextStyle(color: Colors.green),
+                            ),
+                          ]),
+                          trailing: Column(
+                            children: [Icon(Icons.favorite)],
+                          ),
+                        ),
+                        Divider(
+                          color: Colors.blueGrey,
+                        )
+                      ],
+                    ),
+                  );
+                })),
+        Divider(
+          color: Colors.grey,
+        ),
+      ])
+    ]);
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+Container(
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 4.0),
+            height: MediaQuery.of(context).size.height * 1.32,
+            child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: numbers.length,
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Detail())),
+                    child: Container(
+                      width: 300,
+                      height: 150,
+                      child: Card(
+                        color: Colors.white,
+                        child: Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        'assets/cv-group.png',
+                                        height: 70,
+                                        width: 50,
+                                      ),
+                                    ]),
+                                Spacer(
+                                  flex: 1,
+                                ),
+
+                                Column(children: [
+                                  Text(
+                                    "Software Engineer l/ll",
+                                    style: TextStyle(
+                                      color: Colors.blueGrey,
+                                      fontSize: 20,
+                                      fontFamily: "Roboto",
+                                    ),
+                                  ),
+                                  Text("Microsoft",
+                                      style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 15)),
+                                  Text("Addis Abeba",
+                                      style: TextStyle(
+                                          color: Colors.blueGrey,
+                                          fontSize: 15)),
+                                ]),
+                                Spacer(
+                                  flex: 3,
+                                ),
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Icon(Icons.favorite),
+                                      SizedBox(height: 50),
+                                      Text("24hr"),
+                                    ]),
+
+                                // Center(child: Image.asset('assets/peu.png')),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                })),

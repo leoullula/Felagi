@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "504872942190",
+    "project_id": "joblist-456d3",
+    "storage_bucket": "joblist-456d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504872942190:android:77bf6453c432884923c47f",
+        "android_client_info": {
+          "package_name": "com.example.felagi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504872942190-illmlnser64mpr5ttbh1maku4u5rv21n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3orRlvbeLZWdCpxZN-Z1nrV-vU7-rrws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504872942190-illmlnser64mpr5ttbh1maku4u5rv21n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
